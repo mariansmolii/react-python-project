@@ -48,6 +48,7 @@ jobs:
     name: build and push to docker
     runs-on: ubuntu-22.04
     needs: test
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout code
